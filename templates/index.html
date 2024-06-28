@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecruAI Resume Screener</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <script
+      src="https://unpkg.com/htmx.org@2.0.0"
+      integrity="sha384-wS5l5IKJBvK6sPTKa2WZ1js3d947pvWXbPJ1OmWfEuxLgeHcEbjUUA5i9V5ZkpCw"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>RecruAI Resume Screener</h1>
+    <form
+      id="resume-form"
+      hx-post="/screen"
+      hx-target="#results"
+      hx-swap="innerHTML"
+      enctype="multipart/form-data"
+    >
+      <div>
+        <label for="job_description">Job Description (PDF):</label>
+        <input
+          type="file"
+          id="job_description"
+          name="job_description"
+          accept="application/pdf"
+          required
+        />
+      </div>
+      <div>
+        <label for="resume">Resume (PDF):</label>
+        <input
+          type="file"
+          id="resume"
+          name="resume"
+          accept="application/pdf"
+          required
+        />
+      </div>
+      <button type="submit">Screen Resume</button>
+    </form>
+    <div id="results"></div>
+  </body>
+</html>

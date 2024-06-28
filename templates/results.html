@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecruAI Screening Results</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h2>Screening Results</h2>
+    <ul>
+      {% for resume, score, match_type in results %}
+      <li>
+        <div class="resume-container">
+          <strong>Score:</strong> {{ score }} <br />
+          <strong>Match Type:</strong>
+          <span class="{{ match_type | replace(' ', '-') }}"
+            >{{ match_type }}</span
+          >
+          <br />
+          <div class="resume-text">
+            <strong>Resume:</strong> {{ resume }} <br />
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+  </body>
+</html>

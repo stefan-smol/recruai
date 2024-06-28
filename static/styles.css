@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="file"],
+textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #ff7759;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #e16b50;
+}
+
+#results {
+  margin-top: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ff7759;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.bad-match {
+  color: red;
+}
+.good-match {
+  color: orange;
+}
+.excellent-match {
+  color: green;
+}
+.resume-container {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.resume-text {
+  background-color: #f4f4f9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}

@@ -1,0 +1,5 @@
+Flask
+cohere
+numpy
+python-dotenv
+PyPDF2
